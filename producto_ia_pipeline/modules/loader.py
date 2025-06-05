@@ -3,7 +3,7 @@ import pandas as pd
 
 def load_data(filepath):
     """
-    Carga datos desde un archivo CSV o JSON.
+    Carga datos hhola desde un archivo CSV o JSON.
     """
     if filepath.endswith('.csv'):
         df = pd.read_csv(filepath)
