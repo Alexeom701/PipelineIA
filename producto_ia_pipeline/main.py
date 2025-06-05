@@ -1,38 +1,52 @@
-from modules.loader import load_file
-from modules.cleaner import clean_data
-from modules.classifier import classify_sector
-from modules.standardizer import standardize_fields
-from modules.extractor import extract_attributes
-from modules.transformer import transform_data
-from modules.outlier import detect_outliers
-from modules.exporter import export_data
+import os
+import yaml
+import pandas as pd
+from modules.loader import cargar_archivo
+from modules.exporter import exportar_df
+from utils.logger import configurar_logger
 
-def main(input_path, output_path):
-    # 1. Cargar archivo
-    df = load_file(input_path)
+# Configurar el logger
+logger = configurar_logger()
 
-    # 2. Limpieza básica
-    df = clean_data(df)
+def cargar_configuracion(ruta="config.yaml"):
+    """
+    Carga la configuración desde un archivo YAML.
+    """
+    with open(ruta, 'r', encoding='utf-8') as file:
+        return yaml.safe_load(file)
 
-    # 3. Clasificación por sector con IA
-    #df = classify_sector(df)
+def procesar_archivo(config):
+    """
+    Carga datos desde la ruta de entrada y los exporta a la ruta de salida
+    sin aplicar ninguna limpieza.
+    """
+    ruta_entrada = config['entrada']['archivo']
+    ruta_salida = config['salida']['archivo']
 
-    # 4. Estandarización de unidades, marcas, etc.
-    #df = standardize_fields(df)
+    logger.info(f"Archivo de entrada: {ruta_entrada}")
+    logger.info(f"Archivo de salida: {ruta_salida}")
 
-    # 5. Extracción de atributos clave
-    #df = extract_attributes(df)
+    try:
+        # Cargar los datos
+        df = cargar_archivo(ruta_entrada)
+        logger.info(f"Archivo cargado exitosamente: {ruta_entrada}")
+        logger.info(f"Dimensiones del DataFrame: {df.shape}")
 
-    # 6. Transformaciones (IVA, conversiones, etc.)
-    #df = transform_data(df)
+        # Exportar el DataFrame tal cual
+        exportar_df(df, ruta_salida)
+        logger.info(f"Archivo exportado exitosamente: {ruta_salida}")
 
-    # 7. Detección de outliers o errores
-    #df = detect_outliers(df)
+    except Exception as e:
+        logger.exception(f"Error al procesar el archivo: {e}")
 
-    # 8. Exportación del resultado limpio
-    export_data(df, output_path)
+def main():
+    """
+    Función principal para iniciar el pipeline de procesamiento de productos.
+    """
+    logger.info("Iniciando pipeline de procesamiento de productos (solo carga y exportación).")
+    config = cargar_configuracion()
+    procesar_archivo(config)
+    logger.info("Pipeline finalizado.")
 
 if __name__ == "__main__":
-    input_path = "data/raw/ejemplo.csv"
-    output_path = "data/processed/ejemplo_limpio.csv"
-    main(input_path, output_path)
+    main()
