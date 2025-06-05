@@ -1,0 +1,17 @@
+# Configuración general para procesamiento de productos
+
+entrada:
+  archivo: data/raw/testlim.csv   # Ruta de entrada (csv o json)
+  formato: csv|json                      # csv | json
+
+salida:
+  archivo: data/processed/productos_limpios.csv  # Ruta de salida
+  formato: csv|json                                    # csv | json
+
+limpieza:
+  aplicar_basica: true     # Estandariza columnas, NaNs, etc.
+  aplicar_avanzada: true   # Espacios dobles, caracteres especiales, etc.
+
+log:
+  nivel: info
+  archivo: logs/pipeline.log
