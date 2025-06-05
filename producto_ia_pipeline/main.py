@@ -15,19 +15,19 @@ def main(input_path, output_path):
     df = clean_data(df)
 
     # 3. Clasificación por sector con IA
-    df = classify_sector(df)
+    #df = classify_sector(df)
 
     # 4. Estandarización de unidades, marcas, etc.
-    df = standardize_fields(df)
+    #df = standardize_fields(df)
 
     # 5. Extracción de atributos clave
-    df = extract_attributes(df)
+    #df = extract_attributes(df)
 
     # 6. Transformaciones (IVA, conversiones, etc.)
-    df = transform_data(df)
+    #df = transform_data(df)
 
     # 7. Detección de outliers o errores
-    df = detect_outliers(df)
+    #df = detect_outliers(df)
 
     # 8. Exportación del resultado limpio
     export_data(df, output_path)
