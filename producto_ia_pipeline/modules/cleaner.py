@@ -7,10 +7,10 @@ class AICleaner:
     def __init__(self, config):
         self.config = config
         self.nlp_pipeline = None
-
+#hola skslamls
         cleaner_model_path = config.get('cleaner_model_path')
         if cleaner_model_path:
-            try:
+            try:#dsds
                 self.tokenizer = AutoTokenizer.from_pretrained(cleaner_model_path)
                 self.model = AutoModelForSeq2SeqLM.from_pretrained(cleaner_model_path)
                 # Usamos una pipeline de texto a texto para las transformaciones de limpieza
