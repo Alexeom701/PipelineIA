@@ -1,0 +1,22 @@
+# Configuración general del pipeline de IA
+
+entrada:
+  archivo: data/raw/datos_sucios.csv
+  formato: csv
+
+salida:
+  archivo: data/processed/productos_limpios.csv
+  formato: csv
+
+log:
+  nivel: info
+  archivo: logs/pipeline.log
+
+entrenamiento_cleaner:
+  modelo_base: t5-small
+  datos_entrenamiento: data/training/entrenamiento.csv
+  salida_modelo: models/cleaner
+  batch_size: 16
+  epochs: 5
+  max_input_length: 96
+  max_target_length: 96
