@@ -1,0 +1,11 @@
+product_id,nombre_producto,SKU,precio,stock,color,talla,descripcion_corta,unidad_de_medida,fecha,url_imagen,codigo_barras
+PROD001,Camiseta Algodon Orgánico,CAMISO001,29.99,150,Verde Militar,M,Camiseta comoda de algodon 100% organico,unidad,15/01/2023,https://ejemplo.com/img/camiseta001.jpg,75010000001
+PROD002,Pantalón Vaquero Slim Fit,PANTSLIM002,59.5,Sin_info,Azul Oscuro,L,Vaqueros de corte ajustado estilo moderno,unidad,20/03/2023,https://ejemplo.com/img/pantalon002.png,75010000002
+PROD003,Zapatillas Deportivas Correr,ZAPA-RUN-003,89,75,Negro,42,Ideal para corredores maxima amortiguacion,par,10/05/2023,https://ejemplo.com/img/zapa003.jpeg,75010000003
+PROD004,Chaqueta Impermeable Ligera,Sin_info,75.25,Cincuenta,Rojo,XL,Proteccion contra la lluvia muy ligera,unidad,01/07/2023,https://ejemplo.com/img/chaqueta004.gif,75010000004
+PROD005,Gorra Baseball Ajustable,Gorra005,19.99,30,Azul Marino,unica,Gorra clasica de beisbol con ajuste trasero,pieza,05/09/2023,Sin_info,75010000005
+PROD006,Calcetines Pack 3,Sin_info,12.0,200,Gris/Blanco/Negro,unica,3 pares de calcetines comodos,pack,25/11/2023,https://ejemplo.com/img/calcetines006.webp,NO-BARCODE
+PROD007,Mochila Urbana Antirrobo,MochilaUrbana,Ochenta,10,Negro,Sin_info,Mochila con compartimentos ocultos y seguro,unidad,01/01/2024,https://ejemplo.com/img/mochila007.jpg,75010000007
+PROD008,Reloj Inteligente Pro,SMARTWATCH-008,199.99,5,Negro,Sin_info,"Monitoriza actividad fisica, notificaciones",pieza,14/02/2024,https://ejemplo.com/img/reloj008.jpg,75010000008
+PROD009,Sin_info,SKIRT009,45,80,Blanco,S,Falda Casual del Lino Ideal para Verano,unidad,30/03/2024,https://ejemplo.com/img/falda009.jpg,75010000009
+PROD010,Auriculares Inalambricos,AURICULARESBT010,120.0,Sin_info,Blanco,unica,Sonido de alta fidelidad bateria de larga duracion,par,20/05/2024,https://ejemplo.com/img/auris010.jpg,75010000010

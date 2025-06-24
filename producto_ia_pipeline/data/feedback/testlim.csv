@@ -1,0 +1,6 @@
+ID_Producto,Nombre,Precio,Categoría,Stock,Fecha_Lanzamiento,Proveedor,Descuento
+P-001,Laptop EliteBook 1040,899.99,Electrónica,15,15/03/2022,TechImport Co.,10%
+P-002,,"",Electrónicos,-5,2022-12-ABR,Importaciones NULL,15
+P-003,Monitor 24" HD,120.50,ELECT,120,30/02/2023,"Tecnología, S.A.",0%
+P004,Teclado inalámbrico,35.00,,50,15/07/2023,PeriTech,5% descuento
+P-005,Cafetera Premium,"159,99",Hogar,8,31/06/2023,"Mundo Hogar"" Inc.",NA
