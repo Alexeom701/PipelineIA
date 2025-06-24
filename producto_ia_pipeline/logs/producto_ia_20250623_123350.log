@@ -1,0 +1,8 @@
+[2025-06-23 12:33:50] [INFO] [producto_ia] Logger inicializado. Logs en: logs\producto_ia_20250623_123350.log
+[2025-06-23 12:34:07] [INFO] [producto_ia] 🚀 Iniciando pipeline de limpieza...
+[2025-06-23 12:34:07] [INFO] [producto_ia] 📥 Cargando archivo desde: data/raw/datos_sucios.csv
+[2025-06-23 12:34:07] [INFO] [producto_ia] CSV cargado correctamente con encoding: utf-8
+[2025-06-23 12:34:07] [INFO] [producto_ia] ✅ Archivo cargado con forma: (10, 12)
+[2025-06-23 12:34:07] [INFO] [producto_ia] 🧠 Aplicando limpieza híbrida (reglas + modelo)...
+[2025-06-23 12:34:43] [INFO] [producto_ia] 📤 Archivo exportado correctamente a: data/processed/productos_limpios.csv
+[2025-06-23 12:34:43] [INFO] [producto_ia] ✅ Pipeline finalizado.
